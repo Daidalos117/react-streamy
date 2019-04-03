@@ -1,0 +1,14 @@
+.nav-wrapper {
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+
+}
+.nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {}
+
+nav .nav-wrapper i {
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
