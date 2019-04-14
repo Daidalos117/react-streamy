@@ -1,0 +1,59 @@
+$red: #f44336;
+$black: #37474f;
+
+html, body {
+  color: $black;
+}
+
+.input {
+
+  &__group {
+    margin-bottom: 2rem;
+  }
+  &__error {
+    color: #e53935;
+  }
+  &.error {
+    border-color: $red;
+  }
+  &:focus + label {
+  }
+}
+*[type='submit'] {
+  margin-top: 3rem;
+  margin-left: auto;
+  display: block;
+}
+
+.stream-list {
+  &__item {
+    &-left {
+      a {
+        color: $black;
+      }
+    }
+    .row {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__item-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.btn {
+  color: white;
+}
+
+.btn.red {
+  background-color: $red;
+}
+
+.btn-floating.btn-large {
+  position: fixed;
+  bottom: 4%;
+  right: 2rem;
+}

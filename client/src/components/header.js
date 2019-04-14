@@ -8,7 +8,8 @@ const Header = () => {
     <nav>
       <div className="nav-wrapper">
         <Link to="/" className="brand-logo">
-          Logo
+          <i className="material-icons">cast</i>
+          Streams
         </Link>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
