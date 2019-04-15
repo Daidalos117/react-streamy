@@ -8,6 +8,7 @@ import {
   EDIT_STREAM,
   DELETE_STREAM
 } from './types';
+import history from '../history';
 
 export const signIn = userId => {
   return {
@@ -31,8 +32,7 @@ export const createStream = formValues => async (dispatch, getState) => {
     payload: response.data
   });
   //  programmatic navigation right after create stream
-
-
+  history.push('/');
 };
 
 export const fetchStreams = () => async dispatch => {
@@ -54,12 +54,13 @@ export const fetchStream = id => async dispatch => {
 };
 
 export const editStream = (id, formValues) => async dispatch => {
-  const response = await streamsApi.put(`/streams/${id}`, formValues);
+  const response = await streamsApi.patch(`/streams/${id}`, formValues);
 
   dispatch({
     type: EDIT_STREAM,
     payload: response.data
   });
+  history.push('/');
 };
 
 export const deleteStream = id => async dispatch => {

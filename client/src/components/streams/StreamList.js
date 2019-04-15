@@ -12,12 +12,16 @@ class StreamList extends React.Component {
     if (stream.userId === this.props.currentUserId) {
       return (
         <div>
-          <Link className="btn waves-effect waves-light">
+          <Link
+            className="btn waves-effect waves-light"
+            to={`/streams/edit/${stream.id}`}
+          >
             Edit
             <i className="material-icons right">edit</i>
           </Link>
           <Link
             className="btn waves-effect waves-light red"
+            to={`/streams/delete/${stream.id}`}
             style={{ marginLeft: '1rem' }}
           >
             Delete
@@ -71,7 +75,6 @@ class StreamList extends React.Component {
         </div>*/
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <ul className="collection">{this.renderList()}</ul>

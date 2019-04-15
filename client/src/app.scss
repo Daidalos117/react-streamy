@@ -1,12 +1,12 @@
-$red: #f44336;
+$red: #ef5350;
 $black: #37474f;
 
-html, body {
+html,
+body {
   color: $black;
 }
 
 .input {
-
   &__group {
     margin-bottom: 2rem;
   }
@@ -35,6 +35,7 @@ html, body {
     .row {
       display: flex;
       align-items: center;
+      margin: 0;
     }
   }
   &__item-right {
@@ -48,12 +49,18 @@ html, body {
   color: white;
 }
 
-.btn.red {
-  background-color: $red;
+.btn.red,
+.btn-large.red {
+  background-color: $red !important;
 }
 
 .btn-floating.btn-large {
   position: fixed;
   bottom: 4%;
   right: 2rem;
+}
+
+.heading,
+h3{
+  margin-bottom: 6rem;
 }
