@@ -1,25 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import history from '../history';
 
-const Modal = () => {
+const Modal = (props) => {
   return ReactDOM.createPortal(
-    <div onClick={() => history.push('/')} className="modal-backdrop">
+    <div onClick={props.onDismiss} className="modal-backdrop">
       <div onClick={e => e.stopPropagation()} id="modal1" className="modal">
         <div className="modal-content">
-          <h4>Delete stream</h4>
-          <p>Are you sure you want to delete stream?</p>
+          <h4>{props.title}</h4>
+          <p>{props.content}</p>
         </div>
         <div className="modal-footer">
-          <a
-            href="#!"
-            className="modal-close waves-effect waves-green btn-flat"
-          >
-            Cancel
-          </a>
-          <a href="#!" className="modal-close btn red waves-effect waves-light">
-            <i className="material-icons left">delete</i> DELETE
-          </a>
+          {props.actions}
         </div>
       </div>
     </div>,
