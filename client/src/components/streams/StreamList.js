@@ -38,7 +38,7 @@ class StreamList extends React.Component {
         <li className="collection-item stream-list__item" key={stream.id}>
           <div className="row">
             <div className="col s7 stream-list__item-left">
-              <Link to="">
+              <Link to={`/streams/${stream.id}`}>
                 <h4>{stream.title}</h4>
                 <p className="description">{stream.description}</p>
               </Link>
@@ -64,15 +64,6 @@ class StreamList extends React.Component {
       );
     }
   }
-  /*        <div className="right-align">
-          <Link
-            to="/streams/new"
-            className="btn waves-effect waves-light right-align"
-          >
-            <i className="material-icons right">create</i>
-            Create stream
-          </Link>
-        </div>*/
 
   render() {
     return (
